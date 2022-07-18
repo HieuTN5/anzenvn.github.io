@@ -1,0 +1,77 @@
+@import '../../utils/variables.less';
+
+.transferContainer {
+  margin-top: 24px;
+  color: @text-color;
+  text-align: center;
+  h2 {
+    color: @text-title-color;
+    font-size: 1.5rem;
+  }
+}
+
+.balanceWrap {
+  p {
+    margin-bottom: 0;
+    color: @text-color;
+  }
+  span {
+    display: flex;
+    color: #fff;
+    font-weight: 600;
+    font-size: 28px;
+  }
+  :global {
+    .ant-skeleton {
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+    }
+  }
+
+  margin-bottom: 12px;
+}
+
+.minimum {
+  p {
+    color: @text-color;
+  }
+  span {
+    color: @primary-color;
+  }
+}
+.wrapFrom {
+  :global {
+    .ant-tabs-nav {
+      display: none;
+    }
+  }
+  .dGrid {
+    // display: grid;
+    // grid-column-gap: 12px;
+    // grid-template-columns: auto 84px;
+    button {
+      height: 48px;
+    }
+    .amountExtra {
+      margin-bottom: 0;
+      color: @text-color;
+      span {
+        color: @primary-color;
+        font-weight: 500;
+        // font-size: 16px;
+      }
+    }
+    .tagMax {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      span {
+        padding: 2px 6px;
+        color: #000;
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}

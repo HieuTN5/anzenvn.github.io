@@ -1,0 +1,54 @@
+@import '../../../../utils/variables.less';
+
+.logoBlock {
+  align-items: center;
+  margin-bottom: 32px;
+  color: @text-title-color;
+
+  p {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+
+  span {
+    color: @primary-anzen;
+    font-weight: bold;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    text-align: center;
+
+    span {
+      margin-left: 8px;
+      color: @text-title-color;
+      font-size: 32px;
+    }
+
+    img {
+      width: 132px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logoBlock {
+    margin-bottom: 16px;
+
+    .logo {
+      margin-bottom: 16px;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}

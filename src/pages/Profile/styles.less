@@ -1,0 +1,54 @@
+@import '../../utils/variables.less';
+
+.profileContainer {
+  :global {
+    .ant-tabs-top {
+      .ant-tabs-nav::before {
+        border-bottom: none;
+      }
+    }
+  }
+  .tfaContainer {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-template-columns: auto 540px auto;
+    color: @text-color;
+    :global {
+      .ant-card {
+        padding: 24px;
+      }
+      .ant-tabs-nav {
+        display: none;
+      }
+      h3.ant-typography,
+      .ant-typography h3 {
+        color: @text-title-color;
+      }
+    }
+    .taCenter {
+      text-align: center;
+    }
+  }
+  article {
+    margin-bottom: 24px;
+  }
+  .qrCode {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profileContainer {
+    .tfaContainer {
+      grid-template-columns: auto;
+      :global {
+        .ant-card {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../../utils/variables.less';
+
+.fotgotContent {
+  .bottomGroup {
+    display: grid;
+    grid-column-gap: 32px;
+    grid-template-columns: 0.6fr 0.25fr auto;
+    margin-bottom: 32px;
+    padding-top: 12px;
+    color: @text-color;
+    .btnCus {
+      border-radius: 4px;
+    }
+    .regButton {
+      font-weight: bold;
+      background-color: @primary-color;
+      border: @primary-color;
+    }
+  }
+  .regBlock {
+    // text-align: center;
+    color: @text-color;
+    a {
+      color: @primary-color;
+    }
+  }
+}
+
+.sendMailSuccess {
+  padding: 24px;
+  text-align: center;
+  h3 {
+    color: @success-color;
+  }
+  span {
+    svg {
+      color: @success-color !important;
+      font-size: 120px;
+    }
+  }
+  img {
+    width: 65%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../utils/variables.less';
+
+.pageContainer {
+  flex-grow: 1;
+  background-color: transparent;
+
+  // border: 1px solid #e8e8e8;
+  .title {
+    color: #404040;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .zindex {
+    z-index: 1000;
+  }
+
+  .actions {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #f0f2f5;
+  }
+
+  .actions--dark {
+    background-color: @layout-body-background;
+  }
+
+  .affixCustom {
+    :global {
+      .ant-affix {
+        -webkit-box-shadow: 0 8px 6px -6px #ccc;
+        -moz-box-shadow: 0 8px 6px -6px #ccc;
+        box-shadow: 0 8px 6px -6px #ccc;
+      }
+    }
+  }
+
+  .spinner {
+    :global {
+      .ant-spin-container {
+        height: 100%;
+
+        &::after {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .spinnerCollapsed {
+    :global {
+      .ant-spin-spinning {
+        @media screen and (max-width: 599px) {
+          left: calc(50%);
+        }
+
+        position: fixed;
+        top: 50%;
+        left: calc(50% + 40px);
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .spinnerExpand {
+    :global {
+      .ant-spin-spinning {
+        @media screen and (max-width: 599px) {
+          left: calc(50%);
+        }
+
+        position: fixed;
+        top: 50%;
+        left: calc(50% + 128px);
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

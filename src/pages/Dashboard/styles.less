@@ -1,0 +1,135 @@
+@import '../../utils/variables.less';
+
+.welcomeContainer {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: 184px auto 290px;
+  .welcomeContent {
+    margin-bottom: 32px;
+    color: @text-color;
+    h2 {
+      margin-bottom: 0;
+      color: @white-color;
+    }
+    span {
+      color: @primary-color;
+      font-weight: 500;
+    }
+  }
+  .welcomeBar {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    color: @text-color;
+    .infoBlock {
+      display: grid;
+      grid-template-rows: 24px auto;
+      justify-items: center;
+      cursor: pointer;
+      span {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+.betInfoContainer {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: 36px auto 0.2fr;
+  div:first-child {
+    display: grid;
+    align-self: center;
+  }
+  .actionBar {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-template-columns: auto auto auto;
+    align-self: center;
+  }
+}
+
+.myBetInfoContainer {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: 36px auto;
+  height: 69px;
+  text-align: right;
+  div:first-child {
+    display: grid;
+    align-self: center;
+  }
+}
+
+.betInfo {
+  align-self: center;
+  h3 {
+    margin-bottom: 0;
+    color: @white-color;
+  }
+  p {
+    margin-bottom: 0;
+    color: @text-color;
+  }
+}
+
+h2.titleInfo {
+  color: @primary-color;
+}
+
+.dGrid {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: auto auto;
+}
+.mb48 {
+  margin-bottom: 48px;
+}
+
+.informationTab {
+  display: grid;
+  grid-column-gap: 4px;
+  grid-template-columns: 36px auto;
+  height: 69px;
+  // text-align: right;
+  div:first-child {
+    display: grid;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .welcomeContainer {
+    grid-template-columns: auto;
+    .welcomeContent {
+      margin-bottom: 8px;
+    }
+    .welcomeBar {
+      .infoBlock {
+        padding: 8px 4px;
+        background: @bg-card-color;
+        border-radius: 0.3rem;
+      }
+
+      margin-bottom: 32px;
+    }
+  }
+  .betInfoContainer {
+    grid-template-columns: 48px auto;
+    div:first-child {
+      display: grid;
+      align-self: center;
+    }
+    .actionBar {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-top: 12px;
+    }
+  }
+  .dGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .mb48 {
+    margin-bottom: 32px;
+  }
+}

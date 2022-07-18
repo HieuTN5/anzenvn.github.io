@@ -1,0 +1,97 @@
+@import '../../utils/variables.less';
+
+.sliderBanner {
+  margin-top: -24px;
+  margin-right: -24px;
+  margin-left: -24px;
+  .wrapBanner {
+    position: relative;
+    height: 564px;
+    overflow: hidden;
+    // border-radius: 24px;
+    .contentBanner {
+      position: absolute;
+      top: 38%;
+      left: 64px;
+      width: 50%;
+      .wrapContent {
+        margin-bottom: 32px;
+        color: @white-color;
+        .titleBanner {
+          margin-bottom: 16px;
+          font-weight: @font-weight-800;
+          font-size: 24px;
+          //   line-height: 1.5;
+        }
+        .descriptionBanner {
+          overflow: hidden;
+          font-weight: 400;
+          font-size: 18px;
+        }
+      }
+    }
+    .customImage {
+      width: 100%;
+      // border-radius: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sliderBanner {
+    .wrapBanner {
+      height: unset;
+      .contentBanner {
+        top: 20%;
+        width: 50%;
+        .wrapContent {
+          margin-bottom: 16px;
+
+          .titleBanner {
+            font-size: 18px;
+          }
+          .descriptionBanner {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sliderBanner {
+    // padding-right: 16px;
+    // padding-left: 16px;
+    .wrapBanner {
+      height: unset;
+      // border-radius: 12px;
+      .contentBanner {
+        top: 32%;
+        width: 60%;
+        .wrapContent {
+          margin-bottom: 16px;
+          .titleBanner {
+            margin-bottom: 8px;
+            font-size: 16px;
+          }
+          .descriptionBanner {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sliderBanner {
+    // padding-right: 16px;
+    // padding-left: 16px;
+    .wrapBanner {
+      .contentBanner {
+        display: none;
+      }
+    }
+  }
+}

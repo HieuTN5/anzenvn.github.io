@@ -1,0 +1,50 @@
+@import '../../utils/variables.less';
+
+.featureContent {
+  .title {
+    margin-bottom: 8px;
+    font-weight: @font-weight-800;
+    font-size: @font-size-18;
+    text-transform: uppercase;
+  }
+  .description {
+    margin-bottom: 0px;
+    font-weight: @font-weight-600;
+    font-size: @font-size-14;
+  }
+}
+
+.featureImage {
+  width: 72px;
+  height: 72px;
+  margin-top: 4px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(245 181 43) 0%, rgba(255, 189, 47, 1) 100%);
+  border: 1px solid rgba(224, 180, 6, 0.7);
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 1px rgb(217 150 0 / 80%);
+  img {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .featureImage {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .featureImage {
+    margin-right: 8px;
+  }
+  .marginM {
+    margin-top: 16px;
+    div {
+      &:nth-of-type(1) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

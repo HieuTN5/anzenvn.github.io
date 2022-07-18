@@ -1,0 +1,52 @@
+@import '../../../utils/variables.less';
+
+.wrapInfoVerifyMail {
+  text-align: center;
+  .wrapLoader {
+    position: relative;
+    > .loader {
+      position: absolute;
+      top: 34px;
+      left: 47.6%;
+    }
+  }
+  > .wrapLoader + svg {
+    opacity: 0.5;
+  }
+  svg {
+    animation: wiggle 2s linear infinite;
+  }
+  .goToLogin {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: @text-title-color;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: '24px';
+  }
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+}

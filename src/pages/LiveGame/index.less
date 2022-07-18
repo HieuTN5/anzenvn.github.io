@@ -1,0 +1,119 @@
+@import '../../utils/variables.less';
+
+.customPageContainer {
+  margin: -24px !important;
+}
+
+.headingGame {
+  padding-top: 32px;
+  text-align: center;
+  h1 {
+    font-weight: @font-weight-800;
+    font-size: 32px;
+    line-height: 24px;
+  }
+  p {
+    font-weight: @font-weight-600;
+    font-size: 20px;
+  }
+}
+
+.listGame {
+  padding: 48px;
+  .wrapGame {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 2px #262625;
+    filter: drop-shadow(0 0px 2px rgba(255, 189, 47, 0.445));
+    transition: all 0.4s ease-in;
+    &:hover {
+      .wrapInfoGame {
+        opacity: 1;
+      }
+      .imageGame {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        transform: scale(1.25);
+      }
+    }
+    .imageGame {
+      width: 100%;
+      transition: all 0.4s ease-in;
+    }
+    .wrapInfoGame {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: all 0.4s ease-in;
+      .infoGame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 24px;
+        color: @text-color;
+        font-size: 1.25em;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        &::before {
+          position: initial;
+          top: 0%;
+          left: -10%;
+          width: 120%;
+          height: 120%;
+          background-color: rgba(0, 0, 0, 0.5);
+          transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -120%, 0);
+          transition: transform 0.6s;
+          content: '';
+        }
+        .detailGame {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .textGame {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            width: 200px;
+            transform: translateX(-50%);
+            p {
+              padding-bottom: 2px;
+              color: @text-color;
+              font-weight: 700;
+              font-size: @font-size-18;
+              line-height: 24px;
+              text-align: center;
+              text-transform: capitalize;
+            }
+          }
+          .buttonPlayGame {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .headingGame {
+    h1 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}

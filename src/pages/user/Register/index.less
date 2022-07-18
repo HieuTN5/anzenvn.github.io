@@ -1,0 +1,40 @@
+@import '../../../utils/variables.less';
+
+.registerContent {
+  .bottomGroup {
+    display: grid;
+    grid-column-gap: 32px;
+    grid-template-columns: 0.3fr auto;
+    margin-bottom: 32px;
+    padding-top: 12px;
+    color: @text-color;
+    .btnCus {
+      border-radius: 4px;
+    }
+
+    .regButton {
+      font-weight: bold;
+      background-color: @primary-color;
+      border: @primary-color;
+    }
+  }
+
+  .loginBlock {
+    align-self: center;
+    text-align: right;
+  }
+  .regBlock {
+    // text-align: center;
+    color: @text-color;
+    a {
+      color: @primary-color;
+    }
+  }
+  .inputPassword {
+    border: 1px solid;
+    input {
+      height: 46px !important;
+      // border: none;
+    }
+  }
+}
